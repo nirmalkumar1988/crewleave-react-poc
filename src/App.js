@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import './styles/styles.css';
 import ShowQuota from './containers/show-quota';
-require('../node_modules/crewmodules-design-system/dist/css/crewmodules-design-system.css');
+import 'crewmodules-design-system/dist/css/crewmodules-design-system.css';
+import './styles/styles.css';
+
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
 	<div>	
 		<div className="app-header">
 			<div className="app-heading"><h3>CREW LEAVE</h3> </div>
-			<div className="cds-logo_without-boeing-margin-50-percent app-logo" > </div>
+			<div className="cds-logo_without-boeing-margin-25-percent app-logo" > </div>
        </div>
 		<ShowQuota />
 	</div>	

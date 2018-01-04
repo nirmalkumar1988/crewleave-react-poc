@@ -4,6 +4,8 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {datesChanged} from '../actions/index';
 import {cancelClicked} from '../actions/index';
+import IconButton from '../components/IconButton';
+import SelectableIconBadge from '../components/SelectableIconBadge';
 
 
 class ShowQuota extends Component {
@@ -12,12 +14,13 @@ class ShowQuota extends Component {
     super(props);
     this.state = {
 		disabled:true,
-		showResults:false
+		showResults:false,
 	};
 
   }
 	
 	
+	 
 	renderResults(){
 		if(this.state.showResults) {
 			return (
@@ -32,19 +35,20 @@ class ShowQuota extends Component {
 		const btnStyle = {float: 'right', padding:'2em'};
 		const panelStyle = {margin:'2em'};
 		
-		
 		return(
 			<div>
 				<div className='panel panel-default' style={panelStyle} >
 					<div className='panel-heading cds-panel-header'>
 						<div className='cds-panel-header__prefix '>
-							<div className='time-off'></div>
+							<div>
+								 <SelectableIconBadge name="travel-bag_filled_48px" size="32" color="green"/>
+							</div>
 						</div>
 						<div className='cds-panel-header__main'>
 							<h3> Create leave bid request </h3>
 						</div>
 						<div className='cds-panel-header__suffix'>
-							<div className='cds-icon-button'></div>
+			 				<IconButton name="question-mark_outlined_48px" size="32" theme="light"/> 
 						</div>
 					</div>
 					<div className='panel-body'>
